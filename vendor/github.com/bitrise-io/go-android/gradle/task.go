@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/bitrise-io/go-utils/command"
+	//"github.com/bitrise-io/go-utils/log"
 )
 
 // Task ...
@@ -43,11 +44,14 @@ lines:
 		l = strings.Split(l, " ")[0]
 		var module string
 
-		log.Warnf("Gradle Tasks: %s", l)
+			// module relog.Infof("Gradle Tasks: %s", l)
+			// module refmt.Println()
 		split := strings.Split(l, ":")
-		log.Warnf("Variant module split: %s", split)
+			// module relog.Infof("Variant module split: %s", split)
+			// module refmt.Println()
 		size := len(split)
-		log.Warnf("Variant module size: %s", size)
+			// module relog.Infof("Variant module size: %s", size)
+			// module refmt.Println()
 		if size > 1 {
 			module = strings.Join(split[:size - 1], ":")
 			l = split[size - 1]

@@ -171,7 +171,7 @@ func main() {
 	log.Infof("Variants:")
 	fmt.Println()
 
-	variants, err := testTask.GetAllVariants()
+	variants, err := testTask.GetVariants()
 	if err != nil {
 		failf("Failed to fetch variants, error: %s", err)
 	}
