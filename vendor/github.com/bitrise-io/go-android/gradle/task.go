@@ -43,8 +43,11 @@ lines:
 		l = strings.Split(l, " ")[0]
 		var module string
 
+		log.Warnf("Gradle Tasks: %s", l)
 		split := strings.Split(l, ":")
+		log.Warnf("Variant module split: %s", split)
 		size := len(split)
+		log.Warnf("Variant module size: %s", size)
 		if size > 1 {
 			module = strings.Join(split[:size - 1], ":")
 			l = split[size - 1]

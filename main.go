@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/bitrise-io/go-android/cache"
-	"github.com/HugoAlberto/go-android/gradle"
+	"github.com/bitrise-io/go-android/gradle"
 	"github.com/bitrise-io/go-steputils/stepconf"
 	"github.com/bitrise-io/go-utils/log"
 	"github.com/bitrise-io/go-utils/pathutil"
@@ -171,7 +171,7 @@ func main() {
 	log.Infof("Variants:")
 	fmt.Println()
 
-	variants, err := testTask.GetVariants()
+	variants, err := testTask.GetAllVariants()
 	if err != nil {
 		failf("Failed to fetch variants, error: %s", err)
 	}
